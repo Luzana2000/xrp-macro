@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>XRP Macro — Infographic Web</title>
+  <meta name="description" content="XRP macro infographic webapp: KPI, Catalysts, Money Flow Map, Timeline, Laws & Infrastructure, Prophecies, Checklist, Calculator, Risk — TH/EN + Light/Dark." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="top-actions">
+        <button id="btnTH">🇹🇭 TH</button>
+        <button id="btnEN">🇬🇧 EN</button>
+        <button id="modeBtn">🌗</button>
+      </div>
+      <div class="badge" data-i18n="badge">📊 แผนภาพข้อมูล | อัปเดตล่าสุด</div>
+      <h1 data-i18n="hero_title">XRP Macro Infographic Web</h1>
+      <p class="subtitle" data-i18n="hero_sub">KPI • Catalysts • Money Flow Map • Timeline • Laws/Infra • Prophecies • Checklist • Calculator</p>
+
+      <div class="grid cols-3 section" id="kpi">
+        <div class="card kpi">
+          <div>
+            <div class="tag" data-i18n="kpi_price_tag">ราคาอ้างอิง ณ จุดเริ่ม</div>
+            <div class="v" id="priceNow">$3.00</div>
+            <div class="muted" data-i18n="kpi_price_note">ผู้ใช้แจ้งราคาปัจจุบัน</div>
+          </div>
+          <div class="chips">
+            <span class="chip" data-i18n="chip_vol">ความผันผวนสูง</span>
+            <span class="chip" data-i18n="chip_notadvice">ไม่ใช่คำแนะนำ</span>
+          </div>
+        </div>
+        <div class="card kpi">
+          <div>
+            <div class="tag" data-i18n="kpi_case">สถานะคดี SEC–Ripple</div>
+            <div class="v" data-i18n="kpi_case_val">ยุติในทางปฏิบัติ</div>
+            <div class="muted" data-i18n="kpi_case_note">ความเสี่ยงกฎหมายลดลง</div>
+          </div>
+          <div class="chips">
+            <span class="chip" data-i18n="chip_pricedin">ตลาดรับรู้</span>
+          </div>
+        </div>
+        <div class="card kpi">
+          <div>
+            <div class="tag" data-i18n="kpi_inst">โครงสร้างสถาบัน</div>
+            <div class="v" data-i18n="kpi_inst_val">ETF ต่างประเทศ/401(k)</div>
+            <div class="muted" data-i18n="kpi_inst_note">US ETF: รอติดตาม</div>
+          </div>
+          <div class="chips">
+            <span class="chip" data-i18n="chip_inflow">เม็ดเงินสถาบัน</span>
+            <span class="chip" data-i18n="chip_law2025">นโยบายปี 2025</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta">
+        <a href="#flow" class="btn primary" data-i18n="cta_flow">ดู Money Flow Map</a>
+        <a href="#timeline" class="btn" data-i18n="cta_timeline">ไปที่ไทม์ไลน์</a>
+        <a href="#calc" class="btn" data-i18n="cta_calc">เครื่องคิดเลขพอร์ต</a>
+      </div>
+    </header>
+
+    <!-- Catalysts & Signals -->
+    <section id="catalyst" class="section grid cols-2">
+      <div class="card">
+        <h2 data-i18n="cat_head">ตัวเร่งหลัก (Catalysts)</h2>
+        <ul class="list">
+          <li data-i18n="cat_laws">กฎหมาย: GENIUS/Clarity/Anti-CBDC</li>
+          <li data-i18n="cat_etf">ETF นอกสหรัฐฯ + ช่องทาง 401(k)</li>
+          <li data-i18n="cat_swift">SWIFT trials / Rails / CBDC</li>
+          <li data-i18n="cat_rwa">Tokenized RWA (พันธบัตร/ทอง/หุ้น/อสังหา)</li>
+          <li data-i18n="cat_reserve">XRP Reserve → ซัพพลายหมุนเวียนตึง</li>
+        </ul>
+        <div class="callout" data-i18n="cat_note">โปรดตรวจสอบรายละเอียดเชิงเทคนิคจากแหล่งอัปเดตก่อนตัดสินใจ</div>
+      </div>
+      <div class="card">
+        <h2 data-i18n="sig_head">สัญญาณตลาดที่ต้อง “มากับข่าว”</h2>
+        <ul class="list">
+          <li data-i18n="sig_btc">BTC.D ลงชัด</li>
+          <li data-i18n="sig_total">TOTAL ทำ ATH</li>
+          <li data-i18n="sig_eth">ETH ทำ ATH → จุดปล่อย Altseason</li>
+        </ul>
+        <div class="chips">
+          <span class="chip" data-i18n="chip_altseason">Altseason</span>
+          <span class="chip" data-i18n="chip_institutions">สถาบัน</span>
+          <span class="chip" data-i18n="chip_utility">ยูทิลิตี้จริง</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Money Flow Map -->
+    <section id="flow" class="section">
+      <h2 data-i18n="flow_head">Money Flow Map: ข่าว → ยูทิลิตี้ → ราคา</h2>
+      <div class="flow-desktop" id="flowDesktop">
+        <div class="node">
+          <span class="pill" data-i18n="p1_tag">กฎหมาย/กองทุน</span>
+          <h3 data-i18n="p1_title">คดีจบ • ETF • 401(k)</h3>
+          <ul>
+            <li data-i18n="p1_l1">ความเสี่ยงกฎหมายลดลง → Gate เปิด</li>
+            <li data-i18n="p1_l2">ETF นอกสหรัฐฯ, ช่องทาง 401(k), ผู้ดูแลสถาบัน</li>
+            <li data-i18n="p1_l3">นโยบาย 2025: Stablecoin/Clarity/Anti-CBDC</li>
+          </ul>
+          <div class="impact" data-i18n="p1_impact">ผลกระทบ: เม็ดเงินสถาบันเริ่มไหลเข้า, ความเชื่อมั่นสูงขึ้น</div>
+        </div>
+        <div class="chev"><div class="bar"></div><div class="arrow"></div></div>
+        <div class="node">
+          <span class="pill" data-i18n="p2_tag">ระบบการเงิน</span>
+          <h3 data-i18n="p2_title">SWIFT • Rails • CBDC</h3>
+          <ul>
+            <li data-i18n="p2_l1">SWIFT pilots → production corridors</li>
+            <li data-i18n="p2_l2">ISO 20022 / Interop ระหว่างเครือข่าย</li>
+            <li data-i18n="p2_l3">Stablecoin/CBDC ใช้เป็นสภาพคล่องคู่</li>
+          </ul>
+          <div class="impact" data-i18n="p2_impact">ผลกระทบ: การชำระเงินข้ามพรมแดน T+0/ค่าต่ำ, ปริมาณธุรกรรมจริงเพิ่ม</div>
+        </div>
+        <div class="chev"><div class="bar"></div><div class="arrow"></div></div>
+        <div class="node">
+          <span class="pill" data-i18n="p3_tag">โทเคไนซ์สินทรัพย์</span>
+          <h3 data-i18n="p3_title">Tokenized RWA/พันธบัตร</h3>
+          <ul>
+            <li data-i18n="p3_l1">Treasuries/พันธบัตร/กองทุนตลาดเงิน on-chain</li>
+            <li data-i18n="p3_l2">T+0 Settlement, ใช้เป็นคอลแลเทอรัล</li>
+            <li data-i18n="p3_l3">ต้องมี “สินทรัพย์สะพาน” สำหรับโฟลว์ข้ามเครือข่าย</li>
+          </ul>
+          <div class="impact" data-i18n="p3_impact">ผลกระทบ: มูลค่า on-chain มหาศาล → ดีมานด์ด้านสภาพคล่องและ Bridge สูงขึ้น</div>
+        </div>
+        <div class="chev"><div class="bar"></div><div class="arrow"></div></div>
+        <div class="node">
+          <span class="pill" data-i18n="p4_tag">ซัพพลาย</span>
+          <h3 data-i18n="p4_title">XRP Reserve/Locked</h3>
+          <ul>
+            <li data-i18n="p4_l1">Base/Owner Reserve ล็อก XRP เมื่อบัญชี/อ็อบเจ็กต์เพิ่ม</li>
+            <li data-i18n="p4_l2">การถือเชิงสถาบัน/ค้ำสัญญาชำระลดเหรียญหมุนเวียน</li>
+            <li data-i18n="p4_l3">เกิดภาวะตึงตัวบนออร์เดอร์บุ๊ก</li>
+          </ul>
+          <div class="impact" data-i18n="p4_impact">ผลกระทบ: Supply shock + ดีมานด์โครงสร้าง → การ “รีเรต” ราคาเป็นขั้น</div>
+        </div>
+      </div>
+      <div class="flow-mobile" id="flowMobile"></div>
+      <div class="callout" style="margin-top:12px" data-i18n="flow_sum">สรุป: ข่าวเชิงบวก → โครงสร้างใช้งานจริง → โทเคไนซ์สินทรัพย์ → ซัพพลายตึง = มีโอกาสรีเรตราคาเป็นขั้น</div>
+    </section>
+
+    <!-- Timeline full -->
+    <section id="timeline" class="section">
+      <h2 data-i18n="tl_head">ไทม์ไลน์เหตุการณ์ & ช่วงราคาประมาณ</h2>
+      <div class="tl row">
+        <div class="tl-card">
+          <div class="time"><span class="dot"></span><span data-i18n="tl_2025">2025 • Q3–Q4</span></div>
+          <div class="bands">
+            <span class="band" data-i18n="tl_2025_price">$4–$5</span>
+            <span class="band" data-i18n="tl_base">ฐาน: $3</span>
+          </div>
+          <div class="muted" data-i18n="tl_2025_note">คดีจบ • ETF ต่างประเทศ • 401(k) • โมเมนตัมจิตวิทยา</div>
+        </div>
+        <div class="tl-card">
+          <div class="time"><span class="dot"></span><span>2026</span></div>
+          <div class="bands"><span class="band" data-i18n="tl_2026_price">$6–$8</span></div>
+          <div class="muted" data-i18n="tl_2026_note">สถาบันจัดสรรพอร์ต • SWIFT ขยาย • เงื่อนไข Altseason</div>
+        </div>
+        <div class="tl-card">
+          <div class="time"><span class="dot"></span><span>2027</span></div>
+          <div class="bands"><span class="band" data-i18n="tl_2027_price">$10–$15</span></div>
+          <div class="muted" data-i18n="tl_2027_note">Tokenized RWA ใช้งานจริง • โฟลว์ข้ามเชน/ประเทศ</div>
+        </div>
+        <div class="tl-card">
+          <div class="time"><span class="dot"></span><span>2028–2029</span></div>
+          <div class="bands"><span class="band" data-i18n="tl_2028_price">$20–$30</span></div>
+          <div class="muted" data-i18n="tl_2028_note">Supply shock จากการล็อก/ถือเชิงสถาบัน</div>
+        </div>
+        <div class="tl-card">
+          <div class="time"><span class="dot"></span><span>2030</span></div>
+          <div class="bands"><span class="band" data-i18n="tl_2030_price">$50–$100+</span></div>
+          <div class="muted" data-i18n="tl_2030_note">รีเซ็ตระบบ/วิกฤติหนี้ → บทบาท bridge asset สูงขึ้น</div>
+        </div>
+        <div class="tl-card">
+          <div class="time"><span class="dot"></span><span>2031+</span></div>
+          <div class="bands"><span class="band" data-i18n="tl_2031_price">$1,000–$10,000 (Revaluation)</span></div>
+          <div class="muted" data-i18n="tl_2031_note">กรณีกำหนดราคาใหม่ระดับโลก/สินทรัพย์สำรอง</div>
+        </div>
+      </div>
+      <div class="muted" style="margin-top:8px" data-i18n="tl_note">ช่วงราคาเป็นภาพจำลองเพื่อทำความเข้าใจ ไม่ใช่คำพยากรณ์</div>
+    </section>
+
+    <!-- Laws & Infra -->
+    <section class="section grid cols-2">
+      <div class="card">
+        <h2 data-i18n="law_head">กฎหมาย/นโยบาย 2025 (ไฮไลต์)</h2>
+        <ul class="list">
+          <li data-i18n="law1">GENIUS Act — กำกับ Stablecoin</li>
+          <li data-i18n="law2">Clarity Act — ความชัดเจนกำกับสินทรัพย์ดิจิทัล</li>
+          <li data-i18n="law3">Anti-CBDC — จำกัด/ห้าม CBDC ของเฟด</li>
+          <li data-i18n="law4">401(k) — เปิดทางลงทุนคริปโต</li>
+        </ul>
+        <div class="callout" data-i18n="law_sum">ผลรวม: ลดความไม่แน่นอน + เพิ่มช่องทางเงินสถาบัน</div>
+      </div>
+      <div class="card">
+        <h2 data-i18n="infra_head">โครงสร้างการเงิน & การใช้งานจริง</h2>
+        <ul class="list">
+          <li data-i18n="infra1">SWIFT trials → เชื่อมสินทรัพย์ดิจิทัล</li>
+          <li data-i18n="infra2">Rails (RippleNet/Liquidity Hub)</li>
+          <li data-i18n="infra3">CBDC/Stablecoin (เช่น RLUSD)</li>
+          <li data-i18n="infra4">Tokenized RWA/พันธบัตร</li>
+          <li data-i18n="infra5">XRP Reserve (Base/Owner reserve)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Prophecies -->
+    <section class="section grid cols-2">
+      <div class="card">
+        <h2 data-i18n="prop_head">คำทำนาย & ใบเซียมซี</h2>
+        <ul class="list">
+          <li data-i18n="prop1">“ชนะคู่ความ” • “จะได้คืนเพิ่ม”</li>
+          <li data-i18n="prop2">กรอบเวลา “อีกไม่นาน” ~ 1–5 ปี (เชิงสัญลักษณ์)</li>
+        </ul>
+        <div class="callout" data-i18n="prop_role">บทบาท: เสริมความเชื่อมั่นระหว่างรอเหตุการณ์จริงเชื่อมกัน</div>
+      </div>
+      <div class="card">
+        <h2 data-i18n="giss_head">คำทำนาย Brandon Briggs (Badon Giss)</h2>
+        <p class="muted" data-i18n="giss_desc">ชี้การเปลี่ยนแปลงระดับระบบ “อีกไม่นาน” (ไม่ได้ระบุวันเวลา)</p>
+        <div class="chips">
+          <span class="chip" data-i18n="giss_c1">สอดคล้อง: รีเซ็ตระบบ</span>
+          <span class="chip" data-i18n="giss_c2">สอดคล้อง: Revaluation</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Checklist -->
+    <section class="section">
+      <h2 data-i18n="check_head">เช็กลิสต์สัญญาณ</h2>
+      <div class="grid cols-4">
+        <div class="card" data-i18n="check1"><b>US Spot XRP ETF</b><br><span class="muted">ยื่น/ไฟเขียว/เงินไหลเข้า</span></div>
+        <div class="card" data-i18n="check2"><b>SWIFT → Production</b><br><span class="muted">จากทดลองสู่ใช้งานจริง</span></div>
+        <div class="card" data-i18n="check3"><b>Tokenized Bonds/RWA</b><br><span class="muted">ใช้ rail ที่รองรับ XRP</span></div>
+        <div class="card" data-i18n="check4"><b>On-chain XRPL</b><br><span class="muted">บัญชี/อ็อบเจ็กต์โต</span></div>
+      </div>
+    </section>
+
+    <!-- Calculator -->
+    <section id="calc" class="section card calc">
+      <h2 data-i18n="calc_head">เครื่องคิดเลขพอร์ต</h2>
+      <div class="row">
+        <div>
+          <label data-i18n="calc_qty_label">จำนวน XRP</label>
+          <input id="qty" type="number" min="0" step="1" value="30" />
+        </div>
+        <div>
+          <label data-i18n="calc_target_label">ราคาเป้าหมาย (USD/XRP)</label>
+          <select id="target">
+            <option value="10">$10</option>
+            <option value="20">$20</option>
+            <option value="100">$100</option>
+            <option value="1000">$1,000</option>
+            <option value="10000">$10,000</option>
+          </select>
+        </div>
+        <div>
+          <label data-i18n="calc_fx_label">อัตราแลกเปลี่ยน (บาท/ดอลลาร์)</label>
+          <input id="fx" type="number" min="1" step="0.01" value="36.5" />
+        </div>
+      </div>
+      <div class="row" style="margin-top:12px">
+        <div><button class="btn primary" id="btnCalc" data-i18n="calc_btn">คำนวณ</button></div>
+        <div class="result" id="outUSD"></div>
+        <div class="result" id="outTHB"></div>
+      </div>
+      <div class="muted" style="margin-top:6px" data-i18n="calc_note">*เป็นการคูณเลข ไม่รวมค่าธรรมเนียม/ภาษี/สลิพเพจ</div>
+    </section>
+
+    <!-- Risk -->
+    <section class="section card">
+      <h2 data-i18n="risk_head">คำเตือนความเสี่ยง</h2>
+      <ul class="list">
+        <li data-i18n="risk1">สินทรัพย์ดิจิทัลผันผวนสูง อาจขาดทุนได้ทั้งหมด</li>
+        <li data-i18n="risk2">เหตุการณ์เชิงนโยบาย/เทคนิคอาจล่าช้าหรือเปลี่ยนทิศ</li>
+        <li data-i18n="risk3">ช่วงราคาในหน้าเว็บนี้เป็นภาพจำลองเพื่อการศึกษา</li>
+      </ul>
+    </section>
+
+    <footer class="footer" data-i18n="footer">© 2025 XRP Macro Infographic • สร้างเพื่อการศึกษา • Asia/Bangkok</footer>
+  </div>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
